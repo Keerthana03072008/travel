@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Discover France – Month-by-Month Travel</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  
+
+  <Script>
+    window.addEventListener('DOMContentLoaded', function() {
+      function showPage(hash) {
+        if (!hash || hash === "#") hash = "#home";
+        document.querySelectorAll('.page').forEach(function(page) {
+          page.classList.remove('active');
+        });
+        var target = document.querySelector(hash);
+        if (target) target.classList.add('active');
+        document.querySelectorAll('nav a').forEach(function(link) {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === hash) link.classList.add('active');
+        });
+        window.scrollTo(0,0);
+      }
+      showPage(location.hash);
+      window.addEventListener('hashchange', function() {
+        showPage(location.hash);
+      });
+      if (!location.hash || location.hash === "#") {
+        location.hash = "#home";
+      }
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>🇫🇷 Discover France</h1>
+    <p class="tagline">A Month-by-Month Guide for Travelers</p>
+    <nav>
+      <a href="#home" class="nav-btn active">Home</a>
+      <a href="#jan" class="nav-btn">Jan</a>
+      <a href="#feb" class="nav-btn">Feb</a>
+      <a href="#mar" class="nav-btn">Mar</a>
+      <a href="#apr" class="nav-btn">Apr</a>
+      <a href="#may" class="nav-btn">May</a>
+      <a href="#jun" class="nav-btn">Jun</a>
+      <a href="#jul" class="nav-btn">Jul</a>
+      <a href="#aug" class="nav-btn">Aug</a>
+      <a href="#sep" class="nav-btn">Sep</a>
+      <a href="#oct" class="nav-btn">Oct</a>
+      <a href="#nov" class="nav-btn">Nov</a>
+      <a href="#dec" class="nav-btn">Dec</a>
+      <a href="#map" class="nav-btn">Map</a>
+      <a href="#tickets" class="nav-btn">Tickets & Transport</a>
+    </nav>
+  </header>
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="page active">
+      <div class="hero-card">
+        <img src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" class="hero-img" alt="Eiffel Tower">
+        <div class="hero-content">
+          <h2>Bienvenue en France!</h2>
+          <ul class="home-points">
+            <li>🌍 <strong>Why France?</strong> – World-class art, food, fashion, and history at every turn.</li>
+            <li>🍇 <strong>Wine Regions:</strong> Bordeaux, Champagne, Burgundy.</li>
+            <li>🏰 <strong>Castles & Chateaux:</strong> Loire Valley, Versailles.</li>
+            <li>🏔 <strong>Nature:</strong> Alps, Riviera beaches, lavender fields.</li>
+            <li>🎭 <strong>Festivals:</strong> Unique events every month!</li>
+            <li>🍰 <strong>Foodie Heaven:</strong> Croissants, cheese, and Michelin stars.</li>
+            <li>💬 <strong>Tip:</strong> Learn a few French words – locals love it!</li>
+            <li>🎨 <strong>Paris:</strong> Eiffel Tower, Louvre, Montmartre, river tours.</li>
+            <li>🚄 <strong>Travel:</strong> Superfast trains connect all regions.</li>
+            <li>🚗 <strong>Road Trips:</strong> Scenic drives through countryside and vineyards.</li>
+            <li>🚶 <strong>Walking Tours:</strong> Discover hidden gems by foot.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Month Sections -->
+    <section id="jan" class="page">
+      <div class="month-card">
+        <h2>January in France</h2>
+        <ul>
+          <li>❄️ Winter magic in Paris and the Alps – go skiing or enjoy cozy cafés.</li>
+          <li>🎉 <strong>Galette des Rois:</strong> Taste the traditional King's Cake for Epiphany.</li>
+          <li>🖼 <strong>Museums:</strong> Fewer crowds, perfect for Louvre and Musée d'Orsay.</li>
+          <li>🧣 <strong>Tip:</strong> Pack warm layers & enjoy winter sales in shops.</li>
+        </ul>
+      </div>
+    </section>
+    <section id="feb" class="page">
+      <div class="month-card">
+        <h2>February in France</h2>
+        <ul>
+          <li>💘 <strong>Valentine's Day:</strong> Romantic strolls in Montmartre and Seine river cruises.</li>
+          <li>🎭 <strong>Carnival:</strong> Nice Carnival – parades, flowers, and parties!</li>
+          <li>🏔 <strong>Snow:</strong> Peak ski season in the Alps & Pyrenees.</li>
+          <li>🎬 <strong>Tip:</strong> Try French hot chocolate & cinema events.</li>
+        </ul>
+      </div>
+    </section>
+    <section id="mar" class="page">
+      <div class="month-card">
+        <h2>March in France</h2>
+        <ul>
+          <li>🌷 <strong>Spring Awakening:</strong> Gardens begin to bloom in Paris and the south.</li>
+          <li>🍷 <strong>Wine Tasting:</strong> Bordeaux's prime time for vineyard tours.</li>
+          <li>🚲 <strong>Tip:</strong> Bike rentals for city exploration – mild weather.</li>
+          <li>🎶 <strong>Music:</strong> Local jazz festivals start up.</li>
+        </ul>
+      </div>
+    </section>
+    <section id="apr" class="page">
+      <div class="month-card">
+        <h2>April in France</h2>
+        <ul>
+          <li>🌸 <strong>Cherry Blossoms:</strong> Beautiful parks in Paris and Lyon.</li>
+          <li>🐣 <strong>Easter:</strong> Chocolate eggs in patisseries, festive village fairs.</li>
+          <li>🌦 <strong>Tip:</strong> Pack for rain and sun – weather is changeable.</li>
+          <li>🚂 <strong>Day Trips:</strong> Visit Versailles or Monet’s Gardens.</li>
+        </ul>
+      </div>
+    </section>
+    <section id="may" class="page">
+      <div class="month-card">
+        <h2>May in France</h2>
+        <ul>
+          <li>🎬 <strong>Cannes Film Festival:</strong> Glamour on the Riviera.</li>
+          <li>🌿 <strong>Outdoor Fun:</strong> Hiking in Provence, cycling in Loire Valley.</li>
+          <li>🛍 <strong>Markets:</strong> Open air food and flower markets everywhere!</li>
+          <li>🎨 <strong>Art:</strong> Montmartre & street artists bloom.</li>
+        </ul>
+      </div>
+    </section>
+    <section id="jun" class="page">
+      <div class="month-card">
+        <h2>June in France</h2>
+        <ul>
+          <li>☀️ <strong>Start of Summer:</strong> Beaches open, outdoor cafés are lively.</li>
+          <li>🎵 <strong>Fête de la Musique:</strong> Free concerts nationwide on June 21st.</li>
+          <li>🚣 <strong>Rivers:</strong> Kayaking and boat tours in Dordogne & Loire.</li>
+          <li>🍓 <strong>Tip:</strong> Taste fresh summer fruits at local stands.</li>
+        </ul>
+      </div>
+    </section>
+    <section id="jul" class="page">
+      <div class="month-card">
+        <h2>July in France</h2>
+        <ul>
+          <li>🎆 <strong>Bastille Day:</strong> July 14th fireworks, parades, and parties.</li>
+          <li>🚴 <strong>Tour de France:</strong> See the famous bike race in action.</li>
+          <li>🏖️ <strong>Beach Life:</strong> Mediterranean and Atlantic coasts are buzzing.</li>
+          <li>🎸 <strong>Music Festivals:</strong> Huge outdoor events everywhere.</li>
+        </ul>
+      </div>
+    </section>
+    <section id="aug" class="page">
+      <div class="month-card">
+        <h2>August in France</h2>
+        <ul>
+          <li>🌻 <strong>Lavender Fields:</strong> Provence is in full bloom.</li>
+          <li>🏕️ <strong>Camping:</strong> National parks and countryside retreats.</li>
+          <li>🌅 <strong>Late Nights:</strong> Outdoor cinema, night markets, and food festivals.</li>
+          <li>🌊 <strong>Tip:</strong> Book hotels early – it’s peak holiday time!</li>
+        </ul>
+      </div>
+    </section>
+    <section id="sep" class="page">
+      <div class="month-card">
+        <h2>September in France</h2>
+        <ul>
+          <li>🍇 <strong>Harvest:</strong> Grape picking and wine festivals.</li>
+          <li>🎭 <strong>Cultural Events:</strong> Heritage Days – free entry to monuments.</li>
+          <li>📚 <strong>Tip:</strong> Less crowded, perfect for museums and galleries.</li>
+          <li>🌤️ <strong>Mild Weather:</strong> Great for outdoor adventures.</li>
+        </ul>
+      </div>
+    </section>
+    <section id="oct" class="page">
+      <div class="month-card">
+        <h2>October in France</h2>
+        <ul>
+          <li>🍂 <strong>Autumn Colors:</strong> Scenic drives in the countryside.</li>
+          <li>🎃 <strong>Halloween:</strong> Pumpkin festivals and spooky castle tours.</li>
+          <li>🍁 <strong>Tip:</strong> Perfect time for food tours and cozy bistros.</li>
+          <li>🌧️ <strong>Weather:</strong> Bring a jacket – cool and crisp!</li>
+        </ul>
+      </div>
+    </section>
+    <section id="nov" class="page">
+      <div class="month-card">
+        <h2>November in France</h2>
+        <ul>
+          <li>🍷 <strong>Beaujolais Nouveau:</strong> Celebrate the new wine release.</li>
+          <li>🖼️ <strong>Art Fairs:</strong> Paris Photo and contemporary exhibitions.</li>
+          <li>⛪ <strong>Historic Tours:</strong> Explore old cities like Strasbourg.</li>
+          <li>🍲 <strong>Tip:</strong> Try hearty French stews and soups!</li>
+        </ul>
+      </div>
+    </section>
+    <section id="dec" class="page">
+      <div class="month-card">
+        <h2>December in France</h2>
+        <ul>
+          <li>🎄 <strong>Christmas Markets:</strong> Strasbourg, Paris, Colmar – magical decorations and treats.</li>
+          <li>⛷️ <strong>Winter Sports:</strong> Ski resorts open in Alps and Pyrenees.</li>
+          <li>🎁 <strong>Festive Shopping:</strong> Beautiful window displays and lights.</li>
+          <li>🍷 <strong>Tip:</strong> Mulled wine and gingerbread everywhere!</li>
+        </ul>
+      </div>
+    </section>
+    <!-- MAP PAGE -->
+    <section id="map" class="page">
+      <div class="month-card">
+        <h2>France Tourist Map</h2>
+        <div class="caption">Follow the animated route and discover 20+ top places in France! Hover icons for info.</div>
+        <div class="map-container">
+               <svg id="franceMap" viewBox="0 0 900 740">
+            <path d="M180,160 Q150,330 320,120 Q350,70 470,120 Q600,80 670,190 Q830,230 840,350 Q860,400 830,630 Q750,700 570,670 Q460,740 320,700 Q180,660 160,500 Q80,400 180,160" fill="#fbc2eb" stroke="#647dee" stroke-width="10"/>
+            <polyline points="410,210 480,320 600,230 690,310 750,400 700,500 580,600 450,630 340,530 260,410 410,210" fill="none" stroke="#ffd200" stroke-width="7" class="route" />
+            <text x="420" y="165" class="street-label">Champs-Élysées</text>
+            <text x="600" y="220" class="street-label">Promenade des Anglais</text>
+            <text x="330" y="520" class="street-label">Rue de la Loire</text>
+            <text x="170" y="370" class="street-label">Boulevard Bordeaux</text>
+            <text x="770" y="400" class="street-label">Avenue Méditerranée</text>
+            <text x="690" y="605" class="street-label">Mont Blanc Road</text>
+            <!-- Attractions: see previous SVG for full list -->
+            <g class="map-place" data-tip="Paris: Eiffel Tower, Louvre, Montmartre, and more!"><circle cx="410" cy="210" r="28" fill="#ffd200" stroke="#7f53ac" stroke-width="7"/><text x="410" y="218" text-anchor="middle" font-size="2.1rem">🗼</text><text class="map-label" x="410" y="245" text-anchor="middle">Paris</text></g>
+            <g class="map-place" data-tip="Versailles: Grand Palace and Gardens"><rect x="360" y="260" width="44" height="24" rx="12" fill="#38f9d7" stroke="#7f53ac" stroke-width="4"/><text x="382" y="277" text-anchor="middle" font-size="1.5rem">🏰</text><text class="map-label" x="382" y="293" text-anchor="middle">Versailles</text></g>
+            <g class="map-place" data-tip="Disneyland Paris: Magical theme park"><circle cx="470" cy="160" r="16" fill="#43e97b" stroke="#7f53ac" stroke-width="4"/><text x="470" y="166" text-anchor="middle" font-size="1.3rem">🎢</text><text class="map-label" x="470" y="180" text-anchor="middle">Disneyland</text></g>
+            <g class="map-place" data-tip="Montmartre: Art, Sacré-Cœur, Bohemian vibes"><circle cx="390" cy="180" r="13" fill="#fbc2eb" stroke="#7f53ac" stroke-width="3"/><text x="390" y="185" text-anchor="middle" font-size="1.1rem">🎨</text><text class="map-label" x="390" y="196" text-anchor="middle">Montmartre</text></g>
+            <g class="map-place" data-tip="Lyon: Gastronomy, Old Town, Murals"><circle cx="480" cy="320" r="20" fill="#43e97b" stroke="#7f53ac" stroke-width="4"/><text x="480" y="328" text-anchor="middle" font-size="1.6rem">🍷</text><text class="map-label" x="480" y="349" text-anchor="middle">Lyon</text></g>
+            <g class="map-place" data-tip="Loire Valley: Castles & Chateaux"><circle cx="340" cy="530" r="16" fill="#fbc2eb" stroke="#7f53ac" stroke-width="3"/><text x="340" y="537" text-anchor="middle" font-size="1.2rem">🏰</text><text class="map-label" x="340" y="553" text-anchor="middle">Loire Valley</text></g>
+            <g class="map-place" data-tip="Bordeaux: Wine, Squares, Riverfront"><circle cx="190" cy="410" r="17" fill="#ffd200" stroke="#43e97b" stroke-width="4"/><text x="190" y="418" text-anchor="middle" font-size="1.2rem">🍇</text><text class="map-label" x="190" y="436" text-anchor="middle">Bordeaux</text></g>
+            <g class="map-place" data-tip="Toulouse: Pink city, Space Museum"><rect x="230" y="570" width="38" height="22" rx="11" fill="#ffd200" stroke="#7f53ac" stroke-width="3"/><text x="249" y="585" text-anchor="middle" font-size="1.15rem">🚀</text><text class="map-label" x="249" y="599" text-anchor="middle">Toulouse</text></g>
+            <g class="map-place" data-tip="Marseille: Port, Bouillabaisse, Calanques"><rect x="580" y="600" width="38" height="22" rx="11" fill="#43e97b" stroke="#7f53ac" stroke-width="3"/><text x="599" y="616" text-anchor="middle" font-size="1.15rem">🚢</text><text class="map-label" x="599" y="630" text-anchor="middle">Marseille</text></g>
+            <g class="map-place" data-tip="Nice: Beaches, Promenade des Anglais"><rect x="750" y="400" width="46" height="26" rx="13" fill="#38f9d7" stroke="#7f53ac" stroke-width="4"/><text x="773" y="417" text-anchor="middle" font-size="1.32rem">🏖️</text><text class="map-label" x="773" y="435" text-anchor="middle">Nice</text></g>
+            <g class="map-place" data-tip="Cannes: Film Festival, Beach Resorts"><circle cx="810" cy="460" r="14" fill="#ffd200" stroke="#7f53ac" stroke-width="3"/><text x="810" y="468" text-anchor="middle" font-size="1.12rem">🎬</text><text class="map-label" x="810" y="480" text-anchor="middle">Cannes</text></g>
+            <g class="map-place" data-tip="Montpellier: Student City, Medieval Old Town"><rect x="670" y="570" width="31" height="18" rx="9" fill="#38f9d7" stroke="#7f53ac" stroke-width="2"/><text x="685" y="583" text-anchor="middle" font-size="1.05rem">👩‍🎓</text><text class="map-label" x="685" y="597" text-anchor="middle">Montpellier</text></g>
+            <g class="map-place" data-tip="Avignon: Bridge, Papal Palace"><circle cx="580" cy="500" r="12" fill="#ffd200" stroke="#7f53ac" stroke-width="2"/><text x="580" y="508" text-anchor="middle" font-size="1.05rem">⛪</text><text class="map-label" x="580" y="520" text-anchor="middle">Avignon</text></g>
+            <g class="map-place" data-tip="Strasbourg: Christmas Markets, Cathedral"><rect x="800" y="210" width="30" height="18" rx="9" fill="#ffd200" stroke="#7f53ac" stroke-width="2"/><text x="815" y="222" text-anchor="middle" font-size="1.1rem">🎄</text><text class="map-label" x="815" y="236" text-anchor="middle">Strasbourg</text></g>
+            <g class="map-place" data-tip="Mont Saint-Michel: Magical Island Abbey"><circle cx="150" cy="220" r="13" fill="#38f9d7" stroke="#7f53ac" stroke-width="2"/><text x="150" y="225" text-anchor="middle" font-size="1.05rem">🌅</text><text class="map-label" x="150" y="238" text-anchor="middle">Mont St-Michel</text></g>
+            <g class="map-place" data-tip="Normandy: D-Day Beaches, History"><rect x="120" y="300" width="35" height="18" rx="9" fill="#43e97b" stroke="#7f53ac" stroke-width="2"/><text x="137" y="313" text-anchor="middle" font-size="1.05rem">🌊</text><text class="map-label" x="137" y="327" text-anchor="middle">Normandy</text></g>
+            <g class="map-place" data-tip="Alsace: Vineyards, Fairy-tale Villages"><circle cx="750" cy="260" r="12" fill="#43e97b" stroke="#7f53ac" stroke-width="2"/><text x="750" y="265" text-anchor="middle" font-size="1.02rem">🍷</text><text class="map-label" x="750" y="277" text-anchor="middle">Alsace</text></g>
+            <g class="map-place" data-tip="Chamonix: Mont Blanc, Skiing, Hiking"><circle cx="700" cy="630" r="15" fill="#fbc2eb" stroke="#7f53ac" stroke-width="3"/><text x="700" y="638" text-anchor="middle" font-size="1.1rem">⛷️</text><text class="map-label" x="700" y="653" text-anchor="middle">Alps</text></g>
+            <g class="map-place" data-tip="Provence: Lavender, Sun, Art"><rect x="520" y="550" width="38" height="20" rx="10" fill="#ffd200" stroke="#7f53ac" stroke-width="2"/><text x="539" y="563" text-anchor="middle" font-size="1.1rem">🌻</text><text class="map-label" x="539" y="577" text-anchor="middle">Provence</text></g>
+            <g class="map-place" data-tip="Saint-Tropez: Glamorous Beaches, Celebrities"><circle cx="800" cy="530" r="12" fill="#ffd200" stroke="#7f53ac" stroke-width="2"/><text x="800" y="535" text-anchor="middle" font-size="1.08rem">🛥️</text><text class="map-label" x="800" y="547" text-anchor="middle">St-Tropez</text></g>
+            <g class="map-place" data-tip="Chartres: Gothic Cathedral, Medieval town"><rect x="340" y="330" width="28" height="14" rx="7" fill="#38f9d7" stroke="#7f53ac" stroke-width="2"/><text x="354" y="340" text-anchor="middle" font-size="0.95rem">⛪</text><text class="map-label" x="354" y="352" text-anchor="middle">Chartres</text></g>
+          </svg>
+        </div>
+      </div>
+      <script>
+             // Tooltip for attractions
+        const map = document.getElementById('franceMap');
+        const tooltip = document.getElementById('tooltip');
+        if (map) {
+          map.addEventListener('mousemove', function(e) {
+            const attraction = e.target.closest('.map-place');
+            if (attraction) {
+              tooltip.textContent = attraction.getAttribute('data-tip');
+              tooltip.style.opacity = 1;
+              const svgRect = map.getBoundingClientRect();
+              let x = e.clientX - svgRect.left;
+              let y = e.clientY - svgRect.top;
+              tooltip.style.left = (svgRect.left + x + 20) + "px";
+              tooltip.style.top = (svgRect.top + y - 10) + "px";
+            } else {
+              tooltip.style.opacity = 0;
+            }
+          });
+          map.addEventListener('mouseleave', () => { tooltip.style.opacity = 0; });
+        }
+      </script>
+    </section>
+    <!-- TICKETS PAGE -->
+    <section id="tickets" class="page">
+      <div class="month-card">
+        <h2>✈️🚄🚕 Tickets & Transport in France</h2>
+        <ul class="tickets-list">
+          <li>
+            ✈️ <strong>Flight Tickets:</strong>
+            <ul>
+              <li>Major airlines: Air France, EasyJet, Ryanair, Lufthansa, British Airways, Emirates, Qatar Airways, Turkish Airlines, KLM, ITA Airways, Vueling, Swiss, Iberia, and more.</li>
+              <li>Book flights via airline websites, <a href="https://www.skyscanner.net/" target="_blank">Skyscanner</a>, <a href="https://www.expedia.com/" target="_blank">Expedia</a>, <a href="https://www.kayak.com/" target="_blank">Kayak</a>, or travel agencies.</li>
+              <li>Paris Charles de Gaulle (CDG) and Orly (ORY) are the main international airports.</li>
+              <li>Domestic flights connect Paris, Lyon, Nice, Marseille, Toulouse, Bordeaux, Nantes, Strasbourg, Montpellier, Lille, and more.</li>
+              <li>Tips: Always compare prices and book early for best value!</li>
+            </ul>
+          </li>
+          <li>
+            🚄 <strong>Train Tickets:</strong>
+            <ul>
+              <li>Main train companies: SNCF (French National Railways), TGV (high-speed), Eurostar (Paris-London), Thalys (Paris-Brussels-Amsterdam).</li>
+              <li>Book tickets on <a href="https://www.sncf-connect.com/" target="_blank">SNCF Connect</a>, <a href="https://en.oui.sncf/" target="_blank">Oui SNCF</a>, <a href="https://www.raileurope.com/" target="_blank">Rail Europe</a>, or at stations.</li>
+              <li>Train stations: Paris Gare du Nord, Gare de Lyon, Gare Montparnasse, Gare de l'Est, and major city stations.</li>
+              <li>Tip: TGVs are fast, comfortable, and connect all regions. Book in advance for discounts!</li>
+            </ul>
+          </li>
+          <li>
+            🚕 <strong>Taxis & Ride Apps:</strong>
+            <ul>
+              <li>Official taxis available at airports, train stations, and city centers.</li>
+              <li>App-based taxis: <a href="https://www.uber.com/fr/en/" target="_blank">Uber</a>, <a href="https://www.g7.fr/" target="_blank">G7 Taxi</a>, <a href="https://www.bolt.eu/" target="_blank">Bolt</a> in major cities.</li>
+              <li>Tips: For official taxis, check the illuminated "TAXI" sign and always ask for a receipt.</li>
+              <li>Ride apps show prices before booking and accept card payment.</li>
+              <li>Tip: In rural areas, pre-booking a taxi is recommended.</li>
+            </ul>
+          </li>
+        </ul>
+        <p style="margin-top:1.2rem; font-size:1.08rem; color:var(--secondary);">
+          <strong>Did you know?</strong> France has one of the best transport networks in Europe. Mix and match flights, trains, and taxis for the perfect journey!
+        </p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Discover France | Your journey, one month at a time!</p>
+    <small>Made for travel lovers. All images from Unsplash.</small>
+  </footer>
+</body>
+</html>

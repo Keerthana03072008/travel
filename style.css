@@ -1,0 +1,292 @@
+    :root {
+      --primary: #43e97b;
+      --secondary: #7f53ac;
+      --accent: #ffd200;
+      --background: linear-gradient(115deg, #f8ffae 0%, #43e97b 40%, #38f9d7 100%);
+      --card-bg: #fff;
+      --card-shadow: 0 2px 16px #43e97b22;
+      --radius: 20px;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: var(--background);
+      color: #222;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
+      color: #fff;
+      padding: 2rem 1rem 1.3rem 1rem;
+      text-align: center;
+      border-radius: 0 0 32px 32px;
+      box-shadow: 0 2px 12px #43e97b33;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.3rem;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+    .tagline {
+      font-size: 1.18rem;
+      margin-top: 0.3rem;
+      opacity: 0.93;
+      font-weight: 500;
+    }
+    nav {
+      margin-top: 1.2rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    nav a {
+      background: #fff;
+      color: var(--primary);
+      border: none;
+      padding: 0.7rem 1.1rem;
+      border-radius: 17px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px #7f53ac13;
+      font-size: 1.02rem;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      margin-bottom: 3px;
+      transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+      position: relative;
+      outline: none;
+    }
+    nav a.active,
+    nav a:focus,
+    nav a:hover {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 2px 16px #43e97b22;
+    }
+    main {
+      max-width: 900px;
+      margin: 2.5rem auto 0 auto;
+      padding: 0 1.1rem;
+      min-height: 70vh;
+    }
+    .page {
+      display: none;
+      animation: fadein 0.5s;
+      min-height: 50vh;
+    }
+    .page.active {
+      display: block;
+      animation: fadein 0.7s;
+    }
+    @keyframes fadein {
+      0% { opacity: 0; transform: translateY(30px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+    .hero-card {
+      background: linear-gradient(90deg,#fbc2eb44 0%, var(--secondary)22 100%);
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      padding: 2rem 1.2rem;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 2.5rem;
+    }
+    .hero-img {
+      width: 320px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 2px 8px #7f53ac22;
+      flex: 0 0 auto;
+    }
+    .hero-content {
+      flex: 1;
+      min-width: 260px;
+    }
+    .hero-content h2 {
+      font-size: 2rem;
+      color: var(--secondary);
+      margin: 0 0 0.6rem 0;
+    }
+    .home-points {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .home-points li {
+      margin-bottom: 0.85rem;
+      font-size: 1.08rem;
+      background: #fff9;
+      border-radius: 9px;
+      padding: 0.5rem 1rem;
+      box-shadow: 0 1px 4px #38f9d744;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .month-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      padding: 1.7rem 1.2rem;
+      margin-bottom: 2.5rem;
+      margin-top: 1rem;
+    }
+    .month-card h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.35rem;
+      font-family: 'Inter', Arial, sans-serif;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .month-card ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .month-card li {
+      margin-bottom: 0.8rem;
+      font-size: 1.08rem;
+      color: #222;
+      background: #fbc2eb33;
+      padding: 0.55rem 1rem;
+      border-radius: 12px;
+      box-shadow: 0 1px 4px #38f9d744;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .caption {
+      text-align: center;
+      font-size: 1.18rem;
+      color: #647dee;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+    .map-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 0 auto;
+      max-width: 1000px;
+      padding: 1.5rem 0;
+    }
+    svg {
+      background: #fff;
+      border-radius: 32px;
+      box-shadow: 0 8px 36px #647dee22;
+      width: 900px;
+      height: 740px;
+      max-width: 98vw;
+    }
+    .tooltip {
+      position: absolute;
+      background: #fff;
+      color: #7f53ac;
+      padding: 0.7rem 1.1rem;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px #647dee22;
+      font-size: 1.08rem;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s;
+      z-index: 100;
+      min-width: 120px;
+    }
+    .map-place circle, .map-place rect {
+      cursor: pointer;
+      transition: filter 0.2s, transform 0.3s;
+    }
+    .map-place:hover circle, .map-place:hover rect {
+      filter: drop-shadow(0 0 12px #ffd200bb);
+      transform: scale(1.15);
+    }
+    .map-label {
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 0.93rem;
+      fill: #647dee;
+      font-weight: bold;
+      text-shadow: 1px 1px 6px #fff;
+    }
+    .street-label {
+      font-size: 1rem;
+      fill: #43e97b;
+      font-family: 'Pacifico', cursive;
+      font-weight: bold;
+      text-shadow: 1px 1px 6px #fff;
+    }
+    .route {
+      stroke-dasharray: 8 10;
+      animation: dashmove 3s linear infinite;
+    }
+    @keyframes dashmove {
+      to { stroke-dashoffset: 60; }
+    }
+    @media (max-width: 1000px) {
+      svg { width: 99vw; height: 80vw; }
+    }
+    @media (max-width: 900px) {
+      main {
+        padding: 0 0.4rem;
+      }
+      .hero-card {
+        flex-direction: column;
+        gap: 1.2rem;
+        text-align: center;
+      }
+      .hero-img {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+      }
+    }
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+      color: #fff;
+      padding: 1.2rem 0 1rem 0;
+      border-radius: 30px 30px 0 0;
+      margin-top: 3rem;
+      box-shadow: 0 -2px 8px #43e97b33;
+      font-size: 1rem;
+    }
+    footer small {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.92rem;
+      color: var(--accent);
+    }
+    .tickets-list li {
+      margin-bottom: 1.15rem;
+      font-size: 1.12rem;
+      background: #fff7;
+      border-radius: 12px;
+      padding: 0.7rem 1.3rem;
+      box-shadow: 0 1px 5px #43e97b44;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .tickets-list ul {
+      margin-top: .5rem;
+      margin-bottom: .8rem;
+    }
+    .tickets-list li ul li {
+      font-size: 1rem;
+      background: none;
+      box-shadow: none;
+      padding: 0.2rem 0.4rem;
+      margin-bottom: 0.2rem;
+      color: #333;
+      border-radius: 0;
+      display: list-item;
+    }
